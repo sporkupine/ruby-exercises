@@ -8,19 +8,18 @@ RSpec.describe 'Array Exercises' do
       expect(nil_array(5)).to eq([nil, nil, nil, nil, nil])
     end
 
-    # remove the 'x' from the line below to unskip the test
-    xit 'returns an array containing 2 nil values' do
+    it 'returns an array containing 2 nil values' do
       expect(nil_array(2)).to eq([nil, nil])
     end
   end
 
   describe 'first element exercise' do
 
-    xit 'returns the first element of an array of numbers' do
+    it 'returns the first element of an array of numbers' do
       expect(first_element([2, 4, 6, 8, 10])).to eq(2)
     end
 
-    xit 'returns the first element of an array of strings' do
+    it 'returns the first element of an array of strings' do
       expect(first_element(['foo', 'bar'])).to eq('foo')
     end
   end
