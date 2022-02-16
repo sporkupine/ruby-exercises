@@ -26,11 +26,11 @@ RSpec.describe 'Array Exercises' do
 
   describe 'third element exercise' do
 
-    xit 'returns the third element of an array of numbers' do
+    it 'returns the third element of an array of numbers' do
       expect(third_element([2, 4, 6, 8, 10])).to eq(6)
     end
 
-    xit 'returns nil if the array does not have a third element' do
+    it 'returns nil if the array does not have a third element' do
       expect(third_element(['foo', 'bar'])).to eq(nil)
     end
   end
@@ -48,12 +48,12 @@ RSpec.describe 'Array Exercises' do
 
   describe 'add element exercise' do
 
-    xit 'increases the length of an array by 1' do
+    it 'increases the length of an array by 1' do
       numbers = [1, 2, 3, 4]
       expect { add_element(numbers) }.to change { numbers.length }.by(1)
     end
 
-    xit 'increases the length of an empty array by 1' do
+    it 'increases the length of an empty array by 1' do
       data = []
       expect { add_element(data) }.to change { data.length }.by(1)
     end
@@ -61,11 +61,11 @@ RSpec.describe 'Array Exercises' do
 
   describe 'remove last element exercise' do
 
-    xit 'returns the array without the last element' do
+    it 'returns the array without the last element' do
       expect(remove_last_element([1, 3, 5])).to eq([1, 3])
     end
 
-    xit 'returns an empty array when the array only has one element' do
+    it 'returns an empty array when the array only has one element' do
       expect(remove_last_element(['foo'])).to eq([])
     end
   end
@@ -105,33 +105,33 @@ RSpec.describe 'Array Exercises' do
 
   describe 'empty array exercise' do
 
-    xit 'returns true when the array is empty' do
+    it 'returns true when the array is empty' do
       expect(empty_array?([])).to be true
     end
 
-    xit 'returns false when the array is not empty' do
+    it 'returns false when the array is not empty' do
       expect(empty_array?([1, 2, 3])).to be false
     end
   end
 
   describe 'reverse exercise' do
 
-    xit 'returns an array containing the elements in reverse order' do
+    it 'returns an array containing the elements in reverse order' do
       expect(reverse([0, 1, 1, 2, 3, 5])).to eq([5, 3, 2, 1, 1, 0])
     end
 
-    xit 'returns an array containing the element when there is only one' do
+    it 'returns an array containing the element when there is only one' do
       expect(reverse(['foo'])).to eq(['foo'])
     end
   end
 
   describe 'array length exercise' do
 
-    xit 'returns the length of the array' do
+    it 'returns the length of the array' do
       expect(array_length([0, 1, 1, 2, 3, 5])).to eq(6)
     end
 
-    xit 'returns zero when the array is empty' do
+    it 'returns zero when the array is empty' do
       expect(array_length([])).to eq(0)
     end
   end
