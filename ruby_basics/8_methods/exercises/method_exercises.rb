@@ -7,29 +7,46 @@
 # return value: the number's ASCII character (https://www.ascii-code.com/)
 # hint: use Integer#chr
 
+def ascii_translator(num)
+  return num.chr
+end
 
 # method name: #common_sports
 # parameters: current_sports and favorite_sports (both arrays)
 # return value: an array containing items in both arrays
 # hint: use Array#intersection
 
+def common_sports(current_sports, favorite_sports)
+  return current_sports.intersection(favorite_sports)
+end
 
 # method name: #alphabetical_list
 # parameter: games (an array)
 # return value: games, alphabetically sorted and duplicates removed
 # hint: chain Array#sort and Array#uniq together
 
+def alphabetical_list(games)
+  return games.sort.uniq
+end
 
 # method name: #lucky_number
 # parameter: number (an integer) with default value of 7
 # return value: a string "Today's lucky number is <number>"
 
+def lucky_number(num = 7)
+  return "Today's lucky number is #{num}"
+end
 
 # method name: #ascii_code
 # parameter: character (a string)
 # return value: the character's ordinal number
 # explicit return value: 'Input Error' if character's length does not equal 1
 # hint: use String#ord
+
+def ascii_code(char)
+  return "Input Error" if char.length != 1
+  return char.ord
+end
 
 
 # method name: #pet_pun
@@ -40,9 +57,25 @@
 # console output: otherwise, "I think <animal>s have pet-tential!" (potential)
 # hint: use puts
 
+def pet_pun(animal)
+  if animal == "cat"
+    puts "Cats are purr-fect!"
+    return nil
+  end
+  if animal == "dog"
+    puts "Dogs are paw-some!"
+    return nil
+  end
+  puts "I think #{animal}s have pet-tential!"
+  return nil
+end
+
 
 # method name: #twenty_first_century?
 # parameter: year (an integer)
 # return value: true if the year is between 2001 - 2100, otherwise return false
 # hint: use Comparable#between?
 
+def twenty_first_century?(year)
+  return year.to_i.between?(2001, 2100)
+end
